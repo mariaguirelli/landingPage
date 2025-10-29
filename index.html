@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevConnect 2025</title>
+  <link rel="shortcut icon" href="src/images/logo.png" type="image/x-icon">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="src/styles/header.css">
+  <link rel="stylesheet" href="src/styles/home.css">
+  <link rel="stylesheet" href="src/styles/menu.css">
+  <link rel="stylesheet" href="src/styles/testimonials.css">
+  <link rel="stylesheet" href="src/styles/footer.css">
+  <link rel="stylesheet" href="src/styles/styles.css">
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!--       CABEÇALHO           -->
+  <!-- ========================= -->
+  <header>
+    <nav id="navbar">
+      <i class="fa-solid fa-code" id="nav_logo"> DevConnect</i>
+
+      <ul id="nav_list">
+        <li class="nav-item active"><a href="#home">Início</a></li>
+        <li class="nav-item"><a href="#palestrantes">Palestrantes</a></li>
+        <li class="nav-item"><a href="#inscricao">Inscrição</a></li>
+        <li class="nav-item"><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="#inscricao" class="btn-default" id="btn-participar">Inscreva-se</a>
+
+      <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile_menu">
+      <ul id="mobile_nav_list">
+        <li class="nav-item"><a href="#home">Início</a></li>
+        <li class="nav-item"><a href="#palestrantes">Palestrantes</a></li>
+        <li class="nav-item"><a href="#trilhas">Trilhas</a></li>
+        <li class="nav-item"><a href="#inscricao">Inscrição</a></li>
+        <li class="nav-item"><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#inscricao" class="btn-default">Inscreva-se</a>
+    </div>
+    <div class="linha-separadora-linha"></div>
+  </header>
+
+  <!-- ========================= -->
+  <!--     CONTEÚDO PRINCIPAL    -->
+  <!-- ========================= -->
+  <main id="content">
+
+    <!-- ===== SEÇÃO HOME ===== -->
+    <section id="home">
+      <div id="cta">
+        <p class="event-title">Conectando Mentes, Criando o Futuro</p>
+        <h1 class="subtitle">
+          O maior encontro de <span>desenvolvedores</span> do Brasil.
+        </h1>
+
+        <ul class="description">
+           14 a 16 de novembro de 2025<br>
+           São Paulo/SP e Online<br>
+        </ul>
+
+        <div id="cta_buttons">
+          <a href="#inscricao" class="btn-default" id="btn-participar">Quero participar</a>
+
+        </div>
+
+        <div class="social-media-buttons">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div id="banner">
+        <img src="src/images/fotoSemFundo.png" alt="Imagem de destaque do evento">
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO PALESTRANTES ===== -->
+    <section id="palestrantes">
+      <h2 class="section-title">Palestrantes</h2>
+      <h3 class="section-subtitle">Conheça os especialistas que estarão no evento</h3>
+
+      <div id="dishes">
+        <div class="dish">
+          <img src="src/images/ana-souza.jpg" class="dish-image" alt="Ana Souza">
+          <h3 class="dish-title">Ana Souza</h3>
+          <span class="dish-description">Engenheira de Software na Google</span>
+          <div class="dish-price">
+            <h4>Tema: IA e o Futuro da Web</h4>
+          </div>
+        </div>
+
+        <div class="dish">
+          <img src="src/images/rafael-martins.jpg" class="dish-image" alt="Rafael Martins">
+          <h3 class="dish-title">Rafael Martins</h3>
+          <span class="dish-description">Full Stack Developer</span>
+          <div class="dish-price">
+            <h4>Tema: Next.js e Laravel na Prática</h4>
+          </div>
+        </div>
+
+        <div class="dish">
+          <img src="src/images/beatriz-lima.jpg" class="dish-image" alt="Beatriz Lima">
+          <h3 class="dish-title">Beatriz Lima</h3>
+          <span class="dish-description">Product Manager na Microsoft</span>
+          <div class="dish-price">
+            <h4>Tema: Design Inclusivo e Acessibilidade</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO TRILHAS ===== -->
+    <section id="trilhas">
+      <div class="linha-separadora"></div>
+      <h2 class="section-title">Trilhas do Evento</h2>
+      <h3 class="section-subtitle">Escolha o caminho que mais combina com você</h3>
+
+      <ul class="tracks-list">
+        <li><strong>Front-end & UX:</strong> React, Vue, Acessibilidade, Design Systems</li>
+        <li><strong>Back-end & Cloud:</strong> Node.js, Laravel, Google Cloud, AWS</li>
+        <li><strong>IA & Dados:</strong> Machine Learning, ChatGPT, Ética e Privacidade</li>
+      </ul>
+    </section>
+
+    <!-- ===== SEÇÃO INSCRIÇÃO ===== -->
+    <section id="inscricao">
+      <h2 class="section-title">Inscreva-se Agora</h2>
+      <h3 class="section-subtitle">Garanta sua vaga gratuita e receba todas as novidades do evento</h3>
+
+      <form action="../conexao.php" method="POST" id="form-inscricao">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+
+        <label><input type="checkbox" required> Aceito os termos da LGPD</label>
+
+        <button type="submit" class="btn-default">Confirmar Inscrição</button>
+      </form>
+    </section>
+
+    <!-- ===== SEÇÃO FAQ ===== -->
+    <section id="faq">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <h4>O evento é gratuito?</h4>
+        <p>Sim! O DevConnect 2025 é 100% gratuito e com transmissão online ao vivo.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Haverá certificado?</h4>
+        <p>Sim, todos os participantes que assistirem 70% das palestras receberão certificado digital.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Posso participar online?</h4>
+        <p>Sim! Todas as palestras serão transmitidas pela plataforma do evento.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================= -->
+  <!--          RODAPÉ           -->
+  <!-- ========================= -->
+  <footer>
+    <img src="src/images/wave.svg" alt="Onda decorativa">
+    <div id="footer_items">
+      <span id="copyright">
+        &copy; 2025 - DevConnect
+      </span>
+      <div class="social-media-buttons">
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
