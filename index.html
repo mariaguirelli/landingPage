@@ -23,9 +23,6 @@
 
 <body>
 
-  <!-- ========================= -->
-  <!--       CABEÇALHO           -->
-  <!-- ========================= -->
   <header>
     <nav id="navbar">
       <i class="fa-solid fa-code" id="nav_logo"> DevConnect</i>
@@ -56,9 +53,6 @@
     <div class="linha-separadora-linha"></div>
   </header>
 
-  <!-- ========================= -->
-  <!--     CONTEÚDO PRINCIPAL    -->
-  <!-- ========================= -->
   <main id="content">
 
     <!-- ===== SEÇÃO HOME ===== -->
@@ -129,7 +123,6 @@
     <!-- ===== SEÇÃO TRILHAS ===== -->
     <section id="trilhas">
       <div class="linha-separadora"></div>
-      <h2 class="section-title">Trilhas do Evento</h2>
       <h3 class="section-subtitle">Escolha o caminho que mais combina com você</h3>
 
       <ul class="tracks-list">
@@ -140,28 +133,30 @@
     </section>
 
     <!-- ===== SEÇÃO INSCRIÇÃO ===== -->
-    <section id="inscricao">
-      <h2 class="section-title">Inscreva-se Agora</h2>
-      <h3 class="section-subtitle">Garanta sua vaga gratuita e receba todas as novidades do evento</h3>
+    <div id="cta_buttons">
+        <a href="inscricao.html" class="btn-default" id="btn-participar">Quero participar</a>
+        <div id="formulario-inscricao" style="display: none; margin-top: 20px;">
+            <h4>Inscreva-se agora</h4>
+            <form action="../conexao.php" method="POST">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
 
-      <form action="../conexao.php" method="POST" id="form-inscricao">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+                <label for="telefone">Telefone:</label><br>
+                <input type="telefone" id="telefone" name="telefone" required><br><br>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                <button type="submit" class="btn-default">Confirmar Inscrição</button>
+            </form>
+        </div>
+        <a href="tel:+55555555555" id="phone_button">
+            <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
+            (51) 92342-3243
+        </a>
+    </div>
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required>
 
-        <label><input type="checkbox" required> Aceito os termos da LGPD</label>
-
-        <button type="submit" class="btn-default">Confirmar Inscrição</button>
-      </form>
-    </section>
 
     <!-- ===== SEÇÃO FAQ ===== -->
     <section id="faq">
