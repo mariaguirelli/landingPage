@@ -1,203 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevConnect 2025</title>
-  <link rel="shortcut icon" href="src/images/logo.png" type="image/x-icon">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="src/styles/header.css">
   <link rel="stylesheet" href="src/styles/home.css">
   <link rel="stylesheet" href="src/styles/menu.css">
-  <link rel="stylesheet" href="src/styles/testimonials.css">
   <link rel="stylesheet" href="src/styles/footer.css">
   <link rel="stylesheet" href="src/styles/styles.css">
+  <link rel="stylesheet" href="src/styles/testimonials.css">
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Scripts (jQuery versão minified 'mais completa') -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Progress Bar -->
+  <script src="js/progressbar.min.js"></script>
+
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+  <!-- Scroll Reveal-->
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-
 <body>
-
   <header>
-    <nav id="navbar">
-      <i class="fa-solid fa-code" id="nav_logo"> DevConnect</i>
-
-      <ul id="nav_list">
-        <li class="nav-item active"><a href="#home">Início</a></li>
-        <li class="nav-item"><a href="#palestrantes">Palestrantes</a></li>
-        <li class="nav-item"><a href="#inscricao">Inscrição</a></li>
-        <li class="nav-item"><a href="#faq">FAQ</a></li>
-      </ul>
-
-      <a href="#inscricao" class="btn-default" id="btn-participar">Inscreva-se</a>
-
-      <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
-    </nav>
-
-    <!-- Menu Mobile -->
-    <div id="mobile_menu">
-      <ul id="mobile_nav_list">
-        <li class="nav-item"><a href="#home">Início</a></li>
-        <li class="nav-item"><a href="#palestrantes">Palestrantes</a></li>
-        <li class="nav-item"><a href="#trilhas">Trilhas</a></li>
-        <li class="nav-item"><a href="#inscricao">Inscrição</a></li>
-        <li class="nav-item"><a href="#faq">FAQ</a></li>
-      </ul>
-      <a href="#inscricao" class="btn-default">Inscreva-se</a>
+    <div class="container" id="nav-container">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand" id="logo">
+            <i class="fa-solid fa-code me-2"></i> DevConnect
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" id="home-menu">Home</a>
+              <a class="nav-item nav-link" id="palestrantes-menu">Palestrantes</a>
+              <a class="nav-item nav-link" id="apoiadores-menu">Apoiadores</a>
+              <a class="nav-item nav-link" id="inscricao-menu">Inscrição</a>
+              <a class="nav-item nav-link" id="faleConosco-menu">Fale Conosco</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div class="linha-separadora-linha"></div>
   </header>
-
-  <main id="content">
-
-    <!-- ===== SEÇÃO HOME ===== -->
-    <section id="home">
-      <div id="cta">
-        <p class="event-title">Conectando Mentes, Criando o Futuro</p>
-        <h1 class="subtitle">
-          O maior encontro de <span>desenvolvedores</span> do Brasil.
-        </h1>
-
-        <ul class="description">
-           14 a 16 de novembro de 2025<br>
-           São Paulo/SP e Online<br>
-        </ul>
-
-        <div id="cta_buttons">
-          <a href="#inscricao" class="btn-default" id="btn-participar">Quero participar</a>
-
-        </div>
-
-        <div class="social-media-buttons">
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
+  <!-- Sobre o evento -->
+  <main>
+    <div id="home-area"></div>
+    <section class="bg-cover d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('src/images/Programador\ em\ ação\ com\ código.png'); height: 100vh;">
+      <div class="container">
+        <h1 class="display-4 mb-3">Um evento feito por devs e para devs!</h1>
+        <h2 class="h4 mb-4">Conecte-se com profissionais e impulsione sua carreira no mundo da programação.</h2>
+        <button class="main-btn" id="call-btn">Saiba Mais</button>
       </div>
-
-      <div id="banner">
-        <img src="src/images/fotoSemFundo.png" alt="Imagem de destaque do evento">
-      </div>
-    </section>
-
-    <!-- ===== SEÇÃO PALESTRANTES ===== -->
-    <section id="palestrantes">
-      <h2 class="section-title">Palestrantes</h2>
-      <h3 class="section-subtitle">Conheça os especialistas que estarão no evento</h3>
-
-      <div id="dishes">
-        <div class="dish">
-          <img src="src/images/ana-souza.jpg" class="dish-image" alt="Ana Souza">
-          <h3 class="dish-title">Ana Souza</h3>
-          <span class="dish-description">Engenheira de Software na Google</span>
-          <div class="dish-price">
-            <h4>Tema: IA e o Futuro da Web</h4>
+    </section>    
+    
+    <!-- Palestrantes -->
+    <div id="palestrantes-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="main-title">Palestrantes</h3>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="src/images/palestrante1.png" class="card-img-top" alt="Imagem de Perfil 2">
+              <div class="card-body ">
+                <h5 class="card-title">Maicon Kaio</h5>
+                <p class="card-text">Desenvolvimento web</p>
+                <hr>
+                <p class="fw-semibold mb-1">Palestra:<br> "APIs que Conectam o Mundo"</p>
+                <p class="text-muted">🕒 15/09 - 15h00</p>
+              </div>
+            </div>
+          </div>  
+          <div class="col-md-3">
+            <div class="card">
+              <img src="src/images/palestrante2.png" class="card-img-top" alt="Imagem de Perfil 2">
+              <div class="card-body ">
+                <h5 class="card-title">Marina Silva</h5>
+                <p class="card-text">SEO Consultant</p>
+                <hr>
+                <p class="fw-semibold mb-1">Palestra:<br> "Projetos de Alta Escala"</p>
+                <p class="text-muted">🕒 16/09 - 17h00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="src/images/palestrante3.png" class="card-img-top" alt="Imagem de Perfil 3">
+              <div class="card-body">
+                <h5 class="card-title">Paulo Carlos</h5>
+                <p class="card-text">Project Manager</p>
+                <hr>
+                <p class="fw-semibold mb-1">Palestra:<br> "Scrum Além do Código"</p>
+                <p class="text-muted">🕒 17/09 - 16h45</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="src/images/palestrante4.png" class="card-img-top" alt="Imagem de Perfil 4">
+              <div class="card-body">
+                <h5 class="card-title">Camila Duarte</h5>
+                <p class="card-text">UX/UI Designer</p>
+                <hr>
+                <p class="fw-semibold mb-1">Palestra:<br> "Design Inclusivo na Prática"</p>
+                <p class="text-muted">🕒 18/09 - 17h45</p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="dish">
-          <img src="src/images/rafael-martins.jpg" class="dish-image" alt="Rafael Martins">
-          <h3 class="dish-title">Rafael Martins</h3>
-          <span class="dish-description">Full Stack Developer</span>
-          <div class="dish-price">
-            <h4>Tema: Next.js e Laravel na Prática</h4>
+      </div>
+    </div>
+    <!-- Serviços da empresa -->
+    <div id="apoiadores-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <h3 class="main-title">Apoiadores</h3>
           </div>
-        </div>
-
-        <div class="dish">
-          <img src="src/images/beatriz-lima.jpg" class="dish-image" alt="Beatriz Lima">
-          <h3 class="dish-title">Beatriz Lima</h3>
-          <span class="dish-description">Product Manager na Microsoft</span>
-          <div class="dish-price">
-            <h4>Tema: Design Inclusivo e Acessibilidade</h4>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-robot"></i>
+            <h4>NeuroTech Labs</h4>
+            <p>Especialistas em inteligência artificial aplicada à saúde e bem-estar.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-cloud"></i>
+            <h4>CloudNova</h4>
+            <p>Infraestrutura escalável e segura para projetos em nuvem de qualquer porte.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-shield-alt"></i>
+            <h4>SecureCode</h4>
+            <p>Segurança cibernética de ponta para proteger dados e aplicações críticas.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-vr-cardboard"></i>
+            <h4>XR Studio</h4>
+            <p>Experiências imersivas em realidade aumentada e virtual para educação e eventos.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-database"></i>
+            <h4>DataPulse</h4>
+            <p>Consultoria em big data e análise preditiva para decisões estratégicas.</p>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-server"></i>
+            <h4>DevSpark</h4>
+            <p>Comunidade de desenvolvedores que acelera inovação com código aberto.</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ===== SEÇÃO TRILHAS ===== -->
-    <section id="trilhas">
-      <div class="linha-separadora"></div>
-      <h3 class="section-subtitle">Escolha o caminho que mais combina com você</h3>
-
-      <ul class="tracks-list">
-        <li><strong>Front-end & UX:</strong> React, Vue, Acessibilidade, Design Systems</li>
-        <li><strong>Back-end & Cloud:</strong> Node.js, Laravel, Google Cloud, AWS</li>
-        <li><strong>IA & Dados:</strong> Machine Learning, ChatGPT, Ética e Privacidade</li>
-      </ul>
-    </section>
-
-    <!-- ===== SEÇÃO INSCRIÇÃO ===== -->
-    <div id="cta_buttons">
-        <a href="inscricao.html" class="btn-default" id="btn-participar">Quero participar</a>
-        <div id="formulario-inscricao" style="display: none; margin-top: 20px;">
-            <h4>Inscreva-se agora</h4>
-            <form action="../conexao.php" method="POST">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
-
-                <label for="telefone">Telefone:</label><br>
-                <input type="telefone" id="telefone" name="telefone" required><br><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <button type="submit" class="btn-default">Confirmar Inscrição</button>
+    </div>
+    
+    
+<!-- Rodapé -->
+<footer>
+  <div id="contact-area">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="main-title">Entre em contato conosco</h3>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p><span class="contact-tile">Ligue para:</span> (48)99999-9999</p>
+            <p><span class="contact-tile">Horários:</span> 8:00 - 19:00</p>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fa-brands fa-instagram"></i>
+            <p><span class="contact-tile">Envie um email:</span> contato@hdcagency.com.br</p>
+          </div>
+          <div class="col-md-4 contact-box">
+            <i class="fa-brands fa-linkedin"></i>
+            <p><span class="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
+          </div>
+          <div class="col-md-6" id="msg-box">
+            <p>Faça sua inscrição:</p>
+          </div>
+          <div class="col-md-6" id="contact-form">
+            <form action="">
+              <input type="text" class="form-control" placeholder="Nome" name="text">
+              <input type="text" class="form-control" placeholder="E-mail" name="email">
+              <input type="text" class="form-control" placeholder="Cidade" name="text">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="lgpd" required>
+                <label class="form-check-label" for="lgpd">
+                  <p>Li e aceito os <a href="#" target="_blank">termos da LGPD</a></p>
+                </label>
+              </div>
+              <input type="submit" class="main-btn">
             </form>
+          </div>
         </div>
-        <a href="tel:+55555555555" id="phone_button">
-            <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
-            (51) 92342-3243
-        </a>
     </div>
-
-
-
-    <!-- ===== SEÇÃO FAQ ===== -->
-    <section id="faq">
-      <h2 class="section-title">Perguntas Frequentes</h2>
-
-      <div class="faq-item">
-        <h4>O evento é gratuito?</h4>
-        <p>Sim! O DevConnect 2025 é 100% gratuito e com transmissão online ao vivo.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Haverá certificado?</h4>
-        <p>Sim, todos os participantes que assistirem 70% das palestras receberão certificado digital.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Posso participar online?</h4>
-        <p>Sim! Todas as palestras serão transmitidas pela plataforma do evento.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========================= -->
-  <!--          RODAPÉ           -->
-  <!-- ========================= -->
-  <footer>
-    <img src="src/images/wave.svg" alt="Onda decorativa">
-    <div id="footer_items">
-      <span id="copyright">
-        &copy; 2025 - DevConnect
-      </span>
-      <div class="social-media-buttons">
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  <div id="copy-area">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <p>DevConnect - 2025</p>
+          </div>
       </div>
     </div>
-  </footer>
-
-  <script src="src/javascript/script.js"></script>
+  </div>
+</footer>
+<!-- Scripts do projeto -->
+<script src="js/scripts.js"></script>
 </body>
-
 </html>
