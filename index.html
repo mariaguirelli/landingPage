@@ -10,12 +10,7 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/styles/header.css">
-  <link rel="stylesheet" href="src/styles/home.css">
-  <link rel="stylesheet" href="src/styles/menu.css">
-  <link rel="stylesheet" href="src/styles/footer.css">
   <link rel="stylesheet" href="src/styles/styles.css">
-  <link rel="stylesheet" href="src/styles/testimonials.css">
 
   <!-- Scripts (jQuery versão minified 'mais completa') -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -24,9 +19,6 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Progress Bar -->
-  <script src="js/progressbar.min.js"></script>
 
   <!-- Parallax -->
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
@@ -47,11 +39,10 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
             <div class="navbar-nav">
-              <a class="nav-item nav-link" id="home-menu">Home</a>
-              <a class="nav-item nav-link" id="palestrantes-menu">Palestrantes</a>
-              <a class="nav-item nav-link" id="apoiadores-menu">Apoiadores</a>
-              <a class="nav-item nav-link" id="inscricao-menu">Inscrição</a>
-              <a class="nav-item nav-link" id="faleConosco-menu">Fale Conosco</a>
+              <a class="nav-item nav-link" id="home-menu" href="#">Home</a>
+              <a class="nav-item nav-link" id="palestrantes-menu" href="#">Palestrantes</a>
+              <a class="nav-item nav-link" id="apoiadores-menu" href="#">Apoiadores</a>
+              <a class="nav-item nav-link" id="contato-menu" href="#">Faça sua inscrição</a>
             </div>
           </div>
         </div>
@@ -60,12 +51,23 @@
   </header>
   <!-- Sobre o evento -->
   <main>
-    <div id="home-area"></div>
-    <section class="bg-cover d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('src/images/Programador\ em\ ação\ com\ código.png'); height: 100vh;">
-      <div class="container">
-        <h1 class="display-4 mb-3">Um evento feito por devs e para devs!</h1>
-        <h2 class="h4 mb-4">Conecte-se com profissionais e impulsione sua carreira no mundo da programação.</h2>
-        <button class="main-btn" id="call-btn">Saiba Mais</button>
+    <div id="home-area">
+      <section class="bg-cover d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('src/images/Programador.png'); height: 100vh;">
+        <div class="container">
+          <h1 class="display-4 mb-3">Um evento feito por devs e para devs!</h1>
+          <h2 class="h4 mb-4">Conecte-se com profissionais e impulsione sua carreira no mundo da programação.</h2>
+          <button class="main-btn" id="call-btn">Saiba Mais</button>
+        </div>
+      </section>  
+    </div>
+
+    <section id="contador" class="text-center py-5 bg-dark text-white">
+      <h3>Contagem regressiva para o evento</h3>
+      <div id="timer" class="d-flex justify-content-center align-items-center" style="gap: 30px; margin-top: 20px;">
+        <div><span id="dias">0</span><br><small>Dias</small></div>
+        <div><span id="horas">0</span><br><small>Horas</small></div>
+        <div><span id="minutos">0</span><br><small>Minutos</small></div>
+        <div><span id="segundos">0</span><br><small>Segundos</small></div>
       </div>
     </section>    
     
@@ -84,7 +86,7 @@
                 <p class="card-text">Desenvolvimento web</p>
                 <hr>
                 <p class="fw-semibold mb-1">Palestra:<br> "APIs que Conectam o Mundo"</p>
-                <p class="text-muted">🕒 15/09 - 15h00</p>
+                <p class="text-muted">🕒 15/12 - 15h00</p>
               </div>
             </div>
           </div>  
@@ -96,7 +98,7 @@
                 <p class="card-text">SEO Consultant</p>
                 <hr>
                 <p class="fw-semibold mb-1">Palestra:<br> "Projetos de Alta Escala"</p>
-                <p class="text-muted">🕒 16/09 - 17h00</p>
+                <p class="text-muted">🕒 16/12 - 17h00</p>
               </div>
             </div>
           </div>
@@ -108,7 +110,7 @@
                 <p class="card-text">Project Manager</p>
                 <hr>
                 <p class="fw-semibold mb-1">Palestra:<br> "Scrum Além do Código"</p>
-                <p class="text-muted">🕒 17/09 - 16h45</p>
+                <p class="text-muted">🕒 17/12 - 16h45</p>
               </div>
             </div>
           </div>
@@ -120,7 +122,7 @@
                 <p class="card-text">UX/UI Designer</p>
                 <hr>
                 <p class="fw-semibold mb-1">Palestra:<br> "Design Inclusivo na Prática"</p>
-                <p class="text-muted">🕒 18/09 - 17h45</p>
+                <p class="text-muted">🕒 18/12 - 17h45</p>
               </div>
             </div>
           </div>
@@ -170,57 +172,73 @@
     
     
 <!-- Rodapé -->
+<!-- Rodapé -->
 <footer>
-  <div id="contact-area">
+  <div id="contato-area">
     <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="main-title">Entre em contato conosco</h3>
-          </div>
-          <div class="col-md-4 contact-box">
-            <i class="fa-brands fa-whatsapp"></i>
-            <p><span class="contact-tile">Ligue para:</span> (48)99999-9999</p>
-            <p><span class="contact-tile">Horários:</span> 8:00 - 19:00</p>
-          </div>
-          <div class="col-md-4 contact-box">
-            <i class="fa-brands fa-instagram"></i>
-            <p><span class="contact-tile">Envie um email:</span> contato@hdcagency.com.br</p>
-          </div>
-          <div class="col-md-4 contact-box">
-            <i class="fa-brands fa-linkedin"></i>
-            <p><span class="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
-          </div>
-          <div class="col-md-6" id="msg-box">
-            <p>Faça sua inscrição:</p>
-          </div>
-          <div class="col-md-6" id="contact-form">
-            <form action="">
-              <input type="text" class="form-control" placeholder="Nome" name="text">
-              <input type="text" class="form-control" placeholder="E-mail" name="email">
-              <input type="text" class="form-control" placeholder="Cidade" name="text">
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="lgpd" required>
-                <label class="form-check-label" for="lgpd">
-                  <p>Li e aceito os <a href="#" target="_blank">termos da LGPD</a></p>
-                </label>
-              </div>
-              <input type="submit" class="main-btn">
-            </form>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="main-title">Contatos</h3>
         </div>
+
+        <div class="col-md-4 contact-box">
+          <i class="fa-brands fa-whatsapp"></i>
+          <p><span class="contact-tile">Whatsapp para contato:</span><br> (48) 99999-9999</p>
+        </div>
+
+        <div class="col-md-4 contact-box">
+          <i class="fa-brands fa-instagram"></i>
+          <p><span class="contact-tile">Siga-nos no Instagram</span><br> @devconnect</p>
+        </div>
+
+        <div class="col-md-4 contact-box">
+          <i class="fa-brands fa-linkedin"></i>
+          <p><span class="contact-tile">Acompanhe no LinkedIn:</span><br> @devconnect</p>
+        </div>
+
+        <div class="col-md-6" id="msg-box">
+          <p>Faça sua inscrição:</p>
+        </div>
+
+        <div class="col-md-6" id="contact-form">
+          <form>
+            <input type="text" class="form-control" placeholder="Nome" name="text">
+            <input type="text" class="form-control" placeholder="E-mail" name="email">
+            <input type="text" class="form-control" placeholder="Cidade" name="text">
+            <input type="text" class="form-control" placeholder="Whatsapp para contato" name="telefone">
+        
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="lgpd" required>
+              <label class="form-check-label" for="lgpd">
+                <p>Li e aceito os <a href="#" target="_blank">termos da LGPD</a></p>
+              </label>
+            </div>
+        
+            <input type="submit" class="main-btn" value="Enviar">
+          </form>
+        </div>        
+      </div>
+      <!-- Ícones das redes sociais -->
+      <div class="social-icons mt-5">
+        <a href="#" class="icon-circle instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon-circle linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="icon-circle whatsapp"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </div>
+
   <div id="copy-area">
     <div class="container">
       <div class="row">
-          <div class="col-md-12">
-            <p>DevConnect - 2025</p>
-          </div>
+        <div class="col-md-12 text-center">
+          <p>DevConnect - 2025</p>
+        </div>
       </div>
     </div>
   </div>
 </footer>
+
 <!-- Scripts do projeto -->
-<script src="js/scripts.js"></script>
+<script src="src/javascript/script.js"></script>
 </body>
 </html>
