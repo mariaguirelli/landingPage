@@ -331,12 +331,13 @@ header, .navbar {
 /* Copy */
 
 #copy-area {
-  background-color: #F1F1F1;
+  background-color: #0D1321;
 }
 
 #copy-area .container {
   padding: 10px 0;
   text-align: center;
+  background-color: #0D1321;
 }
 
 #copy-area .container p {
@@ -901,7 +902,7 @@ header, .navbar {
 
 #copy-area .container a {
   font-weight: bold;
-  color: #444;
+  color: #fff;
 }
 
 #copy-area .container a:hover {
@@ -1168,3 +1169,95 @@ header, .navbar {
     border-color: #25D366;
   }
   
+  /* Força o fundo escuro mesmo se a section tiver bg-light */
+#faq,
+#faq.bg-light {
+  background-color: #0D1321 !important;
+  padding: 60px 0;
+}
+
+/* Título */
+#faq .main-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Container centralizado */
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Cada item */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 15px;
+}
+
+/* Pergunta: NÃO escura — transparente/leve sobre o fundo */
+.faq-question {
+  width: 100%;
+  background: transparent;                 /* transparente para mostrar o fundo escuro */
+  border: 1px solid rgba(255,255,255,0.06); /* leve contorno */
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: left;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+/* Ícone na pergunta */
+.faq-question i {
+  color: #66e0ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover da pergunta (leve realce, não escurecer) */
+.faq-question:hover {
+  background: rgba(255,255,255,0.02);
+  transform: translateX(2px);
+}
+
+/* Resposta: caixa levemente destacada (mais escura que o fundo) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  background-color: rgba(255,255,255,0.02);
+  border-left: 4px solid rgba(102,224,255,0.18);
+  border-radius: 0 0 8px 8px;
+  padding: 0 18px;
+}
+
+/* Texto da resposta */
+.faq-answer p {
+  margin: 12px 0;
+  color: #e6eef6;
+  line-height: 1.5;
+}
+
+/* Estado ativo (aberto) */
+.faq-item.active .faq-answer {
+  max-height: 400px; /* suficiente para o conteúdo */
+  padding: 12px 18px;
+}
+
+.faq-item.active .faq-question i {
+  color: #00ffcc;
+  transform: rotate(90deg);
+}
+
+/* Responsividade — espaçamento menor em telas pequenas */
+@media (max-width: 576px) {
+  .faq-container { padding: 0 12px; }
+  .faq-question { font-size: 1rem; padding: 12px; }
+  .faq-answer { padding: 10px 12px; }
+}
